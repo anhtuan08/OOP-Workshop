@@ -14,10 +14,10 @@ Date          Reason
 #include <iostream>
 #include <cstring>
 #include <iomanip>
-using namespace std;
 #include "Train.h"
-using namespace sdds;
 
+using namespace sdds;
+using namespace std;
 int main() {
 
 	Train trains[7];
@@ -68,3 +68,4 @@ int main() {
 
 	return 0;
 }
+
