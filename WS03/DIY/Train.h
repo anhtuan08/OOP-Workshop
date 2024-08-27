@@ -32,7 +32,11 @@ public:
 
 	void display() const;
 
-	
+	int loadPeople(int numberPeople);
+
+	double changeSpeed(double speedTrain);
+
+	friend ostream &operator<< (ostream &out, const Train &train);
 
 	~Train();
 
@@ -43,6 +47,8 @@ private:
 
 
 };
+
+int transfer(Train &train1, Train &train2);
 
 
 #endif // !_TRAIN_H_

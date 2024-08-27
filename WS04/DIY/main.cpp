@@ -11,6 +11,7 @@ Initials   Date           Reason
 F.S.	     04/02/2022     Added covered topics and simplifed.
 -----------------------------------------------------------*/
 #include <iostream>
+#include <string>
 #include "Robot.h"
 
 using namespace std;
@@ -18,9 +19,12 @@ using namespace sdds;
 
 int main()
 {
+	string abc;
 	const int num_robots = 6;
 	int broken_robot = 0;
 	char replacmentName[] = "C3PO";
+	
+	
 	Robot robot[num_robots] = {
 		{},
 		{"KC1", "kitchen", 25.33, 4.55, 2, 2.2, false},
@@ -29,6 +33,7 @@ int main()
 		{"KC2", "kitchen", 20.56, 5, 2, 3.5, true},
 		{"BR2", "bedroom", 25.32, 6.5, 2.5, 3.1, true}
 	};
+
 	
 	while ( (broken_robot = conrtolRooomReport(robot, num_robots) ) >= 0) {
 		cout << endl << "Attention: There is a broken robot! Fixing the problem..." << endl;
