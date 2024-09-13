@@ -1,3 +1,7 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
 
 class Robot
 {
@@ -5,19 +9,32 @@ class Robot
 public:
 	Robot();
 	
-	Robot(const char* name,const char* location, double weight, double height, double speed, bool deployed);
+	Robot(string name,const char* location, double weight, double width, double height, double speed, bool deployed);
 
 	~Robot();
 
+	void display();
+
+	double getSpeed();
+
+	bool isDeployed();
+	
+	string getName();
+
+	Robot& set(string name, const char* location, double weight, double width, double height, double speed, bool deployed);
+
+
 private:
-	const char* name;
+	string name;
 	const char* location;
 	double weight;
+	double width;
 	double height;
 	double speed;
 	bool deployed;
 };
 
 namespace sdds {
+	int controlRooomReport(Robot robot[], int numberRobots);
 
 }
