@@ -30,7 +30,7 @@ int main() {
    ifstream CardFile("HealthCardInfo.csv");
    ofstream goodCardFile("goodInfo.csv");
    validationTest();
-   dataEntryTest();
+   //dataEntryTest();
    for (i = 0; i < recs; i++) {
       C = ReadCardFromFile(CardFile);
       cout << C << endl;
@@ -118,10 +118,8 @@ void dataEntryTest() {
    cout << "HealthCard Content:" << endl << C << endl;
 }
 
-
 HealthCard ReadCardFromFile(istream& istr) {
    HealthCard C;
    istr >> C;
    return C;
 }
-
